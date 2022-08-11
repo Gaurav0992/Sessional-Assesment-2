@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <title>Person_Management_Application</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand"><img src="e1.png" alt="Website logo" style="width: 4rem;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="color: white;  padding-left: 2rem;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button" id="blog" href="#" style="color: white; padding-left: 2rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add</a>
+          </li>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" id="itemId" placeholder="Enter Id" aria-label="Search">
+          <button type="button" class="btn btn-outline-light" type="submit" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- header -->
+  <div class="heading">
+    <h1 class="fw-light text-center fst-italic">Person Management Application</h1>
+  </div>
+  <div class="display">
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id : 1
+        </div>
+        <div class="col -sm-4">
+          Name : Gaurav Tuteja
+        </div>
+        <div class="col -sm-4">
+          UserName : Gaur
+        </div>
+        <div class="col">
+          Email : gaurav.298@yahoo.com
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street : Gala Light
+        </div>
+        <div class="col -sm-2">
+          Suite : night 18
+        </div>
+        <div class="col -sm-1">
+          City : Amritsar
+          
+        </div>
+        <div class="col -sm-1">
+          Zipcode : 92998-3874
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude : -37.3159
+        </div>
+        <div class="col">
+          Longitude : 81.1496
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone : 1-770-736-8031
+        </div>
+        <div class="col col-sm-8">
+          Website : Hildergard.org
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name : Romagard-crana
+        </div>
+        <div class="col">
+          CatchPhrase : Multi-layered
+        </div>
+        <div class="col">
+          bs : harness real time e markets
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+            name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" style="border: 3px solid black;margin-top: 2em; margin-bottom: 0.05em;">
+      <div class="row">
+        <div class="col -sm-1">
+          Id
+        </div>
+        <div class="col -sm-4">
+          Name
+        </div>
+        <div class="col -sm-4">
+          UserName
+        </div>
+        <div class="col">
+          Email
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Address:</b>
+        </div>
+        <div class="col -sm-3">
+          Street
+        </div>
+        <div class="col -sm-2">
+          Suite
+        </div>
+        <div class="col -sm-1">
+          City
+        </div>
+        <div class="col -sm-1">
+          Zipcode
+        </div>
+        <div class="col -sm-1">
+          <b>Geo:</b>
+        </div>
+        <div class="col">
+          Latitude
+        </div>
+        <div class="col">
+          Longitude
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-4">
+          Phone
+        </div>
+        <div class="col col-sm-8">
+          Website
+        </div>
+      </div>
+      <div class="row">
+        <div class="col -sm-1">
+          <b>Company:</b>
+        </div>
+        <div class="col">
+          name
+        </div>
+        <div class="col">
+          CatchPhrase
+        </div>
+        <div class="col">
+          bs
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Person's Data</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center" style="border: 3px solid black;margin-top: 2em;">
+            <div class="row">
+              <div class="col -sm-1">
+                Id : 1
+              </div>
+              <div class="col -sm-4">
+                Name : Leanne Graham
+              </div>
+              <div class="col -sm-4">
+                UserName : Bret
+              </div>
+              <div class="col">
+                Email : sincere@april.biz
+              </div>
+            </div>
+            <div class="row">
+              <div class="col -sm-1">
+                <b>Address:</b>
+              </div>
+              <div class="col -sm-3">
+                Street : Kulas Light
+              </div>
+              <div class="col -sm-2">
+                Suite : Apt. 556
+              </div>
+              <div class="col -sm-1">
+                City : Gwenborough
+              </div>
+              <div class="col -sm-1">
+                Zipcode : 92998-3874
+              </div>
+              <div class="col -sm-1">
+                <b>Geo:</b>
+              </div>
+              <div class="col">
+                Latitude : -37.3159
+              </div>
+              <div class="col">
+                Longitude : 81.1496
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-sm-4">
+                Phone : 1-770-736-8031
+              </div>
+              <div class="col col-sm-8">
+                Website : Hildergard.org
+              </div>
+            </div>
+            <div class="row">
+              <div class="col -sm-1">
+                <b>Company:</b>
+              </div>
+              <div class="col">
+                name : Romagard-crana
+              </div>
+              <div class="col">
+                CatchPhrase : Multi-layered
+              </div>
+              <div class="col">
+                bs : harness real time e markets
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="my-container" style="display: flex; flex-wrap: wrap;"></div>
+  </div>
+
+  <!-- model for blog -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Add Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-2">
+              <label for="myid" class="form-label">ID</label>
+              <input type="number" class="form-control" id="myid" required>
+            </div>
+            <div class="col-md-5">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="col-md-5">
+              <label for="username" class="form-label">UserName</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="col-md-12">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" required>
+            </div>
+
+            <div class="col-6">
+              <label for="inputAddress" class="form-label">Address: Street</label>
+              <input type="text" class="form-control" id="inputAddress" required>
+            </div>
+            <div class="col-4">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" required>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip" required>
+            </div>
+            <div class="col-md-3">
+              <label for="lat" class="form-label">Latitude</label>
+              <input type="text" class="form-control" id="lat" required>
+            </div>
+            <div class="col-md-3">
+              <label for="lon" class="form-label">Longitude</label>
+              <input type="text" class="form-control" id="lon" required>
+            </div>
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="number" class="form-control" id="phone" required>
+            </div>
+            <div class="col-md-12">
+              <label for="website" class="form-label">Website</label>
+              <input type="number" class="form-control" id="website" required>
+            </div>
+            <div class="col-md-5">
+              <label for="cname" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="cname" required>
+            </div>
+            <div class="col-md-7">
+              <label for="CatchPhrase" class="form-label">CatchPhrase</label>
+              <input type="text" class="form-control" id="CatchPhrase" required>
+            </div>
+            <div class="col-md-12">
+              <label for="bs" class="form-label">BS</label>
+              <input type="text" class="form-control" id="bs" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Clear</button>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com/" role="button"><i
+            class="fa fa-google"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" role="button"><i
+            class="fa fa-linkedin"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.github.com/" role="button"><i
+            class="fa fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="https://en.wikipedia.org/wiki/Estrella">Estrella Proyectos</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- footer -->
+</body>
+
+</html>
